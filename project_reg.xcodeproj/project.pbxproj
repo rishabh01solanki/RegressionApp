@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5AD742592811D7A758DB4FA2 /* Pods_project_reg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206D8F26EF992F03BF82940 /* Pods_project_reg.framework */; };
+		31B438CCAC266EFD8FD2D7FE /* Pods_project_reg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4DE91A584BA8AFB4A30F84 /* Pods_project_reg.framework */; };
 		D11AE3E32AA3B7BC009B1DC3 /* project_regApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AE3E22AA3B7BC009B1DC3 /* project_regApp.swift */; };
 		D11AE3E52AA3B7BC009B1DC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AE3E42AA3B7BC009B1DC3 /* ContentView.swift */; };
 		D11AE3E72AA3B7BD009B1DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D11AE3E62AA3B7BD009B1DC3 /* Assets.xcassets */; };
 		D11AE3EA2AA3B7BD009B1DC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D11AE3E92AA3B7BD009B1DC3 /* Preview Assets.xcassets */; };
-		D11AE3F12AA3B83A009B1DC3 /* linear_regression_model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = D11AE3F02AA3B83A009B1DC3 /* linear_regression_model.tflite */; };
 		D11AE3F42AA3B897009B1DC3 /* model_helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AE3F32AA3B897009B1DC3 /* model_helper.swift */; };
+		D1422AB12AA5080C00E2134F /* MyModel.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D1422AB02AA5080C00E2134F /* MyModel.mlpackage */; };
 		D159D05A2AA437B200657948 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D159D0592AA437B200657948 /* Media.xcassets */; };
 		D159D05C2AA43DB400657948 /* graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D159D05B2AA43DB400657948 /* graph.swift */; };
 /* End PBXBuildFile section */
@@ -33,19 +33,18 @@
 
 /* Begin PBXFileReference section */
 		09D1C0EE62C1F093CC5BA84A /* Pods-project_reg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project_reg.release.xcconfig"; path = "Target Support Files/Pods-project_reg/Pods-project_reg.release.xcconfig"; sourceTree = "<group>"; };
-		4206D8F26EF992F03BF82940 /* Pods_project_reg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_reg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D4DE91A584BA8AFB4A30F84 /* Pods_project_reg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_reg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BFA23EB21FBF8C51DF4ACD /* Pods-project_reg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project_reg.debug.xcconfig"; path = "Target Support Files/Pods-project_reg/Pods-project_reg.debug.xcconfig"; sourceTree = "<group>"; };
 		D11AE3DF2AA3B7BC009B1DC3 /* project_reg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project_reg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D11AE3E22AA3B7BC009B1DC3 /* project_regApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project_regApp.swift; sourceTree = "<group>"; };
 		D11AE3E42AA3B7BC009B1DC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D11AE3E62AA3B7BD009B1DC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D11AE3E92AA3B7BD009B1DC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D11AE3F02AA3B83A009B1DC3 /* linear_regression_model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = linear_regression_model.tflite; sourceTree = "<group>"; };
 		D11AE3F32AA3B897009B1DC3 /* model_helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model_helper.swift; sourceTree = "<group>"; };
+		D1422AB02AA5080C00E2134F /* MyModel.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = MyModel.mlpackage; path = "../../../Forecasting-using-RNN/MyModel.mlpackage"; sourceTree = "<group>"; };
 		D159D0592AA437B200657948 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D159D05B2AA43DB400657948 /* graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graph.swift; sourceTree = "<group>"; };
 		D1651CF22AA3BC1D00381113 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = DEVELOPER_DIR; };
-		D1651CF52AA3BC2400381113 /* TensorFlowLiteC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TensorFlowLiteC.xcframework; path = Pods/TensorFlowLiteC/Frameworks/TensorFlowLiteC.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD742592811D7A758DB4FA2 /* Pods_project_reg.framework in Frameworks */,
+				31B438CCAC266EFD8FD2D7FE /* Pods_project_reg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,9 +71,8 @@
 		AA10196BDC3DAE2573C5A8BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D1651CF52AA3BC2400381113 /* TensorFlowLiteC.xcframework */,
 				D1651CF22AA3BC1D00381113 /* InterfaceBuilderKit.framework */,
-				4206D8F26EF992F03BF82940 /* Pods_project_reg.framework */,
+				1D4DE91A584BA8AFB4A30F84 /* Pods_project_reg.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,10 +98,10 @@
 		D11AE3E12AA3B7BC009B1DC3 /* project_reg */ = {
 			isa = PBXGroup;
 			children = (
+				D1422AB02AA5080C00E2134F /* MyModel.mlpackage */,
 				D11AE3E22AA3B7BC009B1DC3 /* project_regApp.swift */,
 				D11AE3F32AA3B897009B1DC3 /* model_helper.swift */,
 				D159D05B2AA43DB400657948 /* graph.swift */,
-				D11AE3F02AA3B83A009B1DC3 /* linear_regression_model.tflite */,
 				D11AE3E42AA3B7BC009B1DC3 /* ContentView.swift */,
 				D11AE3E62AA3B7BD009B1DC3 /* Assets.xcassets */,
 				D11AE3E82AA3B7BD009B1DC3 /* Preview Content */,
@@ -182,7 +180,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D11AE3EA2AA3B7BD009B1DC3 /* Preview Assets.xcassets in Resources */,
-				D11AE3F12AA3B83A009B1DC3 /* linear_regression_model.tflite in Resources */,
 				D159D05A2AA437B200657948 /* Media.xcassets in Resources */,
 				D11AE3E72AA3B7BD009B1DC3 /* Assets.xcassets in Resources */,
 			);
@@ -240,6 +237,7 @@
 				D159D05C2AA43DB400657948 /* graph.swift in Sources */,
 				D11AE3F42AA3B897009B1DC3 /* model_helper.swift in Sources */,
 				D11AE3E52AA3B7BC009B1DC3 /* ContentView.swift in Sources */,
+				D1422AB12AA5080C00E2134F /* MyModel.mlpackage in Sources */,
 				D11AE3E32AA3B7BC009B1DC3 /* project_regApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

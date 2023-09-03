@@ -1,5 +1,6 @@
-// Assume this is in LineGraph.swift
+//this is in LineGraph.swift
 import SwiftUI
+
 
 struct LineGraph: View {
     var data: [CGFloat]
@@ -14,28 +15,28 @@ struct LineGraph: View {
             let stepX = frame.width / CGFloat(self.data.count - 1)
             let stepY = (frame.height) / (maxDataValue - minDataValue)
             
-            // Draw the line
-            Path { path in
-                for i in 0..<self.data.count {
-                    let x = CGFloat(i) * stepX
-                    let y = frame.height - CGFloat(self.data[i] - minDataValue) * stepY
-                    if i == 0 {
-                        path.move(to: CGPoint(x: x, y: y))
-                    } else {
-                        path.addLine(to: CGPoint(x: x, y: y))
-                    }
-                }
-            }
-            .stroke(Color.blue, lineWidth: 2)
+            // Find the center x position based on the frame
+            let centerX = frame.width / 2
             
-            // Highlight points
+            // Assuming user's input is in the center of the data array
+            let centerIndex = data.count / 2
+            
+            // Highlight points and annotate
             ForEach(pointsToHighlight, id: \.self) { index in
+                // Calculate x such that the user's inputted sq ft is centered
+                let x = centerX + (CGFloat(index) - CGFloat(centerIndex)) * stepX
+                let y = frame.height - CGFloat(self.data[index] - minDataValue) * stepY
+                
+                // Circle
                 Circle()
                     .fill(Color.red)
                     .frame(width: 10, height: 10)
-                    .offset(x: CGFloat(index) * stepX - 5, y: frame.height - CGFloat(self.data[index] - minDataValue) * stepY - 5)
+                    .offset(x: x - 5, y: y - 5)
+                
+                // Annotation
+                Text("\(labels[index]) sqft, \(Int(self.data[index]))k")
+                    .offset(x: x + 10, y: y - 20)
             }
         }
     }
 }
-

@@ -4,6 +4,4 @@ target 'project_reg' do
   use_frameworks!
   
   pod 'Sketch'
-  pod 'TensorFlowLiteSwift' 
-
 end

@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    let modelHelper = ModelHelper()
+    let modelHelper = CoreMLModelHelper()
     
     @State private var houseSize: String = ""
     @State private var predictedPrices: [Float]? = nil
-    @State private var labels: [String] = []  // New State for dynamic labels
+    @State private var labels: [String] = []
     @State private var isLoading: Bool = false
     @State private var showError: Bool = false
     
@@ -20,13 +20,18 @@ struct ContentView: View {
         }
         let sizes = [size - 200, size - 100, size, size + 100, size + 200]
         
-        // Convert the sizes to string labels for the graph
         self.labels = sizes.map { String(Int($0)) }
         
-        if let predictions = modelHelper.runModelOnMultipleSizes(sizes) {
-            self.predictedPrices = predictions
+        var predictions: [Float] = []
+        for size in sizes {
+            if let prediction = modelHelper.runModelOnSize(size) {
+                predictions.append(prediction)
+            }
         }
+
+        self.predictedPrices = predictions
     }
+    
     
     var body: some View {
         NavigationView {
@@ -48,22 +53,13 @@ struct ContentView: View {
                     
                     // Your graph will go here
                     if let prices = predictedPrices {
-                        LineGraph(data: prices.map { CGFloat($0) },
-                                  labels: labels,  // Use the dynamic labels
-                                  pointsToHighlight: [0, 1, 3])
-                            .frame(height: 200)
-                            .overlay(
-                                VStack {
-                                    Spacer()
-                                    Text("Square ft").foregroundColor(.white).offset(x:0,y:-5)
-                                }
-                            )
-                            .overlay(
-                                HStack {
-                                    Text("Price($k)").foregroundColor(.white).rotationEffect(.degrees(-90)).offset(x: -20, y: -5)
-                                    Spacer()
-                                }
-                            )
+                        GeometryReader { geometry in
+                            LineGraph(data: prices.map { CGFloat($0) },
+                                      labels: labels,
+                                      pointsToHighlight: [0,1, 2, 3,4])
+                                .frame(height:200)
+                        }
+        
                             .background(Color.white.opacity(0.3))
                             .cornerRadius(16)
                             .padding(.bottom, 20)
